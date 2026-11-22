@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Presenter — live voice processing for iPhone and iPad</title>
+    <meta name="description" content="Presenter turns an iPhone or iPad and a USB audio interface into a live speech processor: high-pass and parametric EQ, a 3-band compressor and a 31-band graphic EQ with analyser.">
+    <meta name="theme-color" content="#000000">
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="wrap">
+        <a class="brand" href="../">Small Audio</a>
+        <nav class="nav" aria-label="Main">
+            <a href="../">Home</a>
+            <a href="../iem-mixer/">IEM Mixer</a>
+            <a href="./" aria-current="page">Presenter</a>
+            <a href="guide.html">Guide</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="hero">
+        <div class="wrap hero-grid">
+            <div>
+                <span class="eyebrow label">For iPhone and iPad</span>
+                <h1>Presenter</h1>
+                <p class="lede">A clear voice in any room. Put Presenter between the speaker's microphone and the PA, ring out the feedback, and get clean, even speech without carrying a rack.</p>
+                <div class="buttons">
+                    <!-- Replace href with the App Store link once the app is live. -->
+                    <a class="button on green" href="#" aria-disabled="true">Coming soon to the App Store</a>
+                    <a class="button" href="guide.html">Read the guide</a>
+                </div>
+                <div class="status" style="margin-top: 20px">
+                    <span class="dot green"></span><span class="green">Running</span>
+                    <span class="mono">48 kHz · 144 frames · 8.6 ms</span>
+                </div>
+            </div>
+
+            <div class="console" aria-hidden="true">
+                <div class="strip"><div class="meter" style="--level: 64%"></div><span class="name">In</span></div>
+                <div class="strip" data-accent="red"><div class="fader" style="--level: 50%"><span class="cap"></span></div><span class="name">125</span></div>
+                <div class="strip" data-accent="red"><div class="fader" style="--level: 44%"><span class="cap"></span></div><span class="name">250</span></div>
+                <div class="strip" data-accent="green"><div class="fader" style="--level: 50%"><span class="cap"></span></div><span class="name">1k</span></div>
+                <div class="strip" data-accent="orange"><div class="fader" style="--level: 62%"><span class="cap"></span></div><span class="name">2.5k</span></div>
+                <div class="strip" data-accent="green"><div class="fader" style="--level: 36%"><span class="cap"></span></div><span class="name">4k</span></div>
+                <div class="strip" data-accent="green"><div class="fader" style="--level: 50%"><span class="cap"></span></div><span class="name">8k</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="wrap">
+            <h2>Signal chain</h2>
+            <p class="secondary">One mono mic in, three stages, out to the PA. Each stage can be bypassed.</p>
+            <div class="chain">
+                <div class="step"><span class="label">Input</span><span class="secondary">Mic via USB interface</span></div>
+                <div class="step"><span class="label">EQ</span><span class="secondary">High-pass + 3 parametric bands</span></div>
+                <div class="step"><span class="label">Comp</span><span class="secondary">3-band compressor</span></div>
+                <div class="step"><span class="label">GEQ</span><span class="secondary">31-band graphic EQ + analyser</span></div>
+                <div class="step"><span class="label">Output</span><span class="secondary">To the PA</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="wrap">
+            <h2>Screens</h2>
+            <p class="secondary">One landscape screen. Swipe or tap EQ, Comp and GEQ to move between them.</p>
+            <!-- To add screenshots: save PNGs into assets/img/ and replace each
+                 .placeholder div with <img src="../assets/img/NAME.png" alt="…">. -->
+            <div class="shots">
+                <figure class="shot">
+                    <div class="placeholder">Screenshot: graphic EQ + analyser</div>
+                    <figcaption>31 faders over the live spectrum. The ▼ marks the loudest band.</figcaption>
+                </figure>
+                <figure class="shot">
+                    <div class="placeholder">Screenshot: channel EQ</div>
+                    <figcaption>Drag dots on the curve; pinch to change Q.</figcaption>
+                </figure>
+                <figure class="shot">
+                    <div class="placeholder">Screenshot: compressor</div>
+                    <figcaption>Each band's gain reduction, threshold and makeup gain, on the graph.</figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="wrap">
+            <h2>Features</h2>
+            <div class="grid">
+                <div class="card" data-accent="green">
+                    <h3>Ring out the room</h3>
+                    <p>A 31-band, 1/3-octave graphic EQ drawn over a live analyser with peak hold. Feedback shows as a spike, and <em>Go to</em> selects the band nearest it.</p>
+                </div>
+                <div class="card" data-accent="orange">
+                    <h3>Boosts you can't miss</h3>
+                    <p>Boosted bands turn orange, so a boost left in after ringing out is easy to spot. <em>Reset boosts</em> clears them and keeps your cuts.</p>
+                </div>
+                <div class="card" data-accent="red">
+                    <h3>Channel EQ</h3>
+                    <p>A high-pass filter for rumble and handling noise, plus three parametric bands. Drag dots on the curve, pinch for width, or set exact values on the faders.</p>
+                </div>
+                <div class="card" data-accent="blue">
+                    <h3>3-band compressor</h3>
+                    <p>Even out a speaker who moves on and off the mic. Set threshold and makeup gain on the graph, and ratio, attack and release on the faders. Solo a band to hear it alone.</p>
+                </div>
+                <div class="card" data-accent="purple">
+                    <h3>Presets</h3>
+                    <p>Save a preset for each venue or speaker. Your current settings are kept when the app closes, even if you never save a preset.</p>
+                </div>
+                <div class="card" data-accent="yellow">
+                    <h3>Low latency</h3>
+                    <p>See the sample rate, buffer and round-trip latency at all times. The graphic EQ adds no delay of its own.</p>
+                </div>
+                <div class="card">
+                    <h3>Touch you can trust</h3>
+                    <p>Controls need a short press-and-hold before they move, so a quick swipe never changes anything by accident.</p>
+                </div>
+                <div class="card">
+                    <h3>Matches IEM Mixer</h3>
+                    <p>The same black, stage-ready design as IEM Mixer: easy to read in a dark room.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="wrap">
+            <h2>What you need</h2>
+            <table>
+                <tr><th>Device</th><td>iPhone or iPad with iOS / iPadOS 27 or later</td></tr>
+                <tr><th>Interface</th><td>A class-compliant USB audio interface with a mic input, e.g. a two-channel desktop interface. Its output goes to the PA or desk.</td></tr>
+                <tr><th>Mic</th><td>Any microphone your interface supports (dynamic, condenser or lavalier receiver).</td></tr>
+            </table>
+            <div class="buttons">
+                <a class="button green" href="guide.html">Get set up →</a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="wrap">
+        <span>© 2026 Small Audio</span>
+        <span><a href="../">Home</a> · <a href="guide.html">Presenter guide</a> · <a href="../iem-mixer/">IEM Mixer</a></span>
+    </div>
+</footer>
+
+</body>
+</html>

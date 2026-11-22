@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Presenter user guide</title>
+    <meta name="description" content="How to use Presenter: connecting, ringing out with the graphic EQ, channel EQ, the 3-band compressor and presets.">
+    <meta name="theme-color" content="#000000">
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="wrap">
+        <a class="brand" href="../">Small Audio</a>
+        <nav class="nav" aria-label="Main">
+            <a href="../">Home</a>
+            <a href="../iem-mixer/">IEM Mixer</a>
+            <a href="./">Presenter</a>
+            <a href="guide.html" aria-current="page">Guide</a>
+        </nav>
+    </div>
+</header>
+
+<main class="wrap">
+    <div style="padding-top: 48px">
+        <span class="eyebrow label">Presenter</span>
+        <h1>User guide</h1>
+        <p class="lede">From plugging in to a clear, feedback-free voice. The usual order is: connect, ring out, shape, compress, save.</p>
+    </div>
+
+    <div class="guide">
+        <nav class="toc" aria-label="Contents">
+            <span class="label secondary">Contents</span>
+            <ol>
+                <li><a href="#connect">1. Connect &amp; start</a></li>
+                <li><a href="#touch">2. Touch controls</a></li>
+                <li><a href="#ringout">3. Ring out (GEQ)</a></li>
+                <li><a href="#eq">4. Channel EQ</a></li>
+                <li><a href="#comp">5. Compressor</a></li>
+                <li><a href="#presets">6. Presets</a></li>
+                <li><a href="#trouble">Troubleshooting</a></li>
+            </ol>
+        </nav>
+
+        <article>
+            <h2 id="connect">1. Connect &amp; start</h2>
+            <ol>
+                <li>Plug the mic into your USB interface, and the interface into your iPhone or iPad. Send the interface's output to the PA or desk.</li>
+                <li>Open Presenter and hold the device in landscape.</li>
+                <li>Tap <kbd>Start</kbd>. The status turns green, <span class="status" style="display: inline-flex"><span class="dot green"></span><span class="green">Running</span></span>, and shows the sample rate, buffer size and latency.</li>
+                <li>Speak into the mic and watch the input meter in the top bar. Set the interface's gain so speech stays in the green and only reaches yellow on loud words.</li>
+            </ol>
+            <p>Tap <kbd>ⓘ</kbd> for full device details, including input and output names and round-trip latency. Tap <kbd>?</kbd> for tips in the app.</p>
+            <div class="note" data-accent="red">
+                <span class="label">Feedback warning</span>
+                Testing with the built-in mic and speaker will feed back. Use headphones, or a real mic and PA.
+            </div>
+            <div class="note" data-accent="orange">
+                <span class="label">Sample rate warning</span>
+                An orange warning means the input and output are running at different sample rates. Audio still works, but it's converted. Set both to the same rate for the lowest latency.
+            </div>
+
+            <h2 id="touch">2. Touch controls</h2>
+            <ul>
+                <li><strong>Tap</strong> a dot, band or fader to select it.</li>
+                <li><strong>Press and hold</strong> a control for a moment (you'll feel a tap), <strong>then drag</strong> to change it.</li>
+                <li>A quick swipe never changes a setting. Swipe left or right to move between <kbd>EQ</kbd>, <kbd>Comp</kbd> and <kbd>GEQ</kbd>, or tap them in the top bar.</li>
+                <li><strong>Double-tap</strong> a fader to reset it to its default.</li>
+            </ul>
+
+            <h2 id="ringout">3. Ring out with the graphic EQ</h2>
+            <p>Presenter opens on <kbd>GEQ</kbd>, because ringing out is the first job in a new room. Do it with the mic where the speaker will stand.</p>
+            <ol>
+                <li>Make sure <kbd>GEQ</kbd> and <kbd>RTA</kbd> (the analyser) are on. The blue spectrum shows what's going to the outputs. Turn on <kbd>Peak hold</kbd> for an orange line of recent peaks, and tap <kbd>Clear</kbd> to reset it.</li>
+                <li>Bring the PA up slowly until it just starts to ring.</li>
+                <li>Feedback shows as a narrow spike. The <kbd>▼</kbd> marks the band nearest the loudest frequency, and the <em>Loudest</em> readout shows its frequency and level. Tap <kbd>Go to</kbd> to select that band.</li>
+                <li>Pull that band below 0 dB until the ringing stops. Use <kbd>◀</kbd> <kbd>▶</kbd> and the side fader for fine control.</li>
+                <li>Bring the PA up a little more and repeat for the next frequency that rings. Two to four cuts is typical.</li>
+            </ol>
+            <p>Some engineers push a band <em>up</em> on purpose to find the frequency that rings, then cut it. Boosted bands turn orange, so you can see any left in. <kbd>Reset</kbd> sets every band back to 0 dB.</p>
+            <div class="note" data-accent="green">
+                <span class="label">Tip</span>
+                Small, narrow cuts at the problem frequencies are better than a big cut across many bands, which makes a voice thin.
+            </div>
+
+            <h2 id="eq">4. Channel EQ</h2>
+            <p>Shape the voice on the <kbd>EQ</kbd> screen.</p>
+            <h3>High-pass filter</h3>
+            <p>Turn on <kbd>HPF</kbd> to remove rumble, stage noise and mic handling. Its slope is 12 dB/oct. Set <em>Freq</em> as high as you can before the voice sounds thin, typically 80–150 Hz.</p>
+            <h3>Parametric bands</h3>
+            <ol>
+                <li>Pick a band (Low, Mid, High) with the band button, or tap its dot on the graph.</li>
+                <li>Drag the dot left or right for frequency, and up or down to boost or cut.</li>
+                <li>Pinch on the graph to change the band's Q (width).</li>
+                <li>Use the <em>Freq</em>, <em>Gain</em> and <em>Q</em> faders on the right for exact values.</li>
+            </ol>
+            <p>To find a frequency that sounds bad: boost a narrow band, sweep it until the problem stands out, then pull it below 0 dB. <kbd>Reset boosts</kbd> clears any boost left in and keeps your cuts.</p>
+            <p><kbd>EQ</kbd> switches the whole channel EQ on and off, for a quick before/after comparison. <kbd>Band</kbd> switches the selected band on and off. The faint background on the graph is the live output spectrum.</p>
+
+            <h2 id="comp">5. Compressor</h2>
+            <p>The <kbd>Comp</kbd> screen evens out level, so a speaker who leans in or turns away stays clear. It works in three bands (low, mid, high), so a boomy word doesn't pull down the whole voice.</p>
+            <ol>
+                <li>Turn on <kbd>Active</kbd>.</li>
+                <li>Each band is a "hill" on the graph that drops as the band compresses. Drag a band's <strong>white arrow</strong> down to lower its threshold until the hill moves on louder words.</li>
+                <li>Drag the <strong>white handles</strong> at the top to move the crossovers between bands.</li>
+                <li>Drag a band's hill up to add makeup gain, up to +6 dB.</li>
+                <li>Set <em>Ratio</em>, <em>Attack</em> and <em>Release</em> for the selected band with the faders on the right.</li>
+            </ol>
+            <p><kbd>Solo</kbd> lets you hear only the selected band, which helps when you set crossovers. Solo is always off when a preset loads. <kbd>Band</kbd> turns the selected band on and off.</p>
+            <div class="note" data-accent="blue">
+                <span class="label">Starting point for speech</span>
+                Ratio 3:1 and a threshold that gives a few dB of reduction on normal speech. Leave attack and release at their defaults.
+            </div>
+
+            <h2 id="presets">6. Presets</h2>
+            <p>Tap the presets button in the top bar.</p>
+            <ul>
+                <li><kbd>Save as new preset…</kbd> saves the EQ, compressor and graphic EQ settings. Name it after the venue or the speaker.</li>
+                <li>Tap a preset to load it. Swipe left on a preset to <kbd>Rename</kbd> or <kbd>Delete</kbd> it.</li>
+                <li>If you change a loaded preset, it's marked <em>Modified since saved</em>. Tap <kbd>Update</kbd> to save the changes into it.</li>
+                <li><kbd>Reset all settings to defaults</kbd> sets everything flat. Saved presets are kept.</li>
+            </ul>
+            <p>You don't have to save a preset for your settings to be kept. Presenter remembers the current settings when it closes. Device settings such as sample rate aren't part of a preset, because they belong to the hardware.</p>
+
+            <h2 id="trouble">Troubleshooting</h2>
+            <table>
+                <tr><th>Problem</th><th>What to do</th></tr>
+                <tr><td>Status shows <span class="status" style="display: inline-flex"><span class="dot red"></span>Stopped</span></td><td>Tap <kbd>Start</kbd>. If a red error line appears, check that the interface is connected and powered, then try again.</td></tr>
+                <tr><td>No sound out</td><td>Check <kbd>ⓘ</kbd> to see which output device Presenter is using. Check the interface's output level and the PA input.</td></tr>
+                <tr><td>Meter not moving</td><td>Check the interface's input gain and phantom power for condenser mics.</td></tr>
+                <tr><td>Voice sounds thin</td><td>Lower the HPF frequency, and check the GEQ for too many deep cuts.</td></tr>
+                <tr><td>Voice sounds squashed</td><td>Raise the compressor thresholds or lower the ratio.</td></tr>
+                <tr><td>Analyser is blank</td><td>Turn on <kbd>RTA</kbd>. The analyser only runs while audio is running.</td></tr>
+            </table>
+        </article>
+    </div>
+</main>
+
+<footer class="site-footer">
+    <div class="wrap">
+        <span>© 2026 Small Audio</span>
+        <span><a href="./">Presenter</a> · <a href="../iem-mixer/">IEM Mixer</a></span>
+    </div>
+</footer>
+
+</body>
+</html>

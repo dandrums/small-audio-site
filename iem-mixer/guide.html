@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>IEM Mixer user guide</title>
+    <meta name="description" content="How to set up a show in IEM Mixer: tracks, mixes and interface routing, the USB patch, input meters, cues, Listen and Show Mode.">
+    <meta name="theme-color" content="#000000">
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="wrap">
+        <a class="brand" href="../">Small Audio</a>
+        <nav class="nav" aria-label="Main">
+            <a href="../">Home</a>
+            <a href="./">IEM Mixer</a>
+            <a href="guide.html" aria-current="page">Guide</a>
+            <a href="../presenter/">Presenter</a>
+        </nav>
+    </div>
+</header>
+
+<main class="wrap">
+    <div style="padding-top: 48px">
+        <span class="eyebrow label">IEM Mixer</span>
+        <h1>User guide</h1>
+        <p class="lede">Go from an empty show to a mix in every ear. Allow about ten minutes for your first show.</p>
+    </div>
+
+    <div class="guide">
+        <nav class="toc" aria-label="Contents">
+            <span class="label secondary">Contents</span>
+            <ol>
+                <li><a href="#overview">How it fits together</a></li>
+                <li><a href="#connect">1. Connect your interface</a></li>
+                <li><a href="#show">2. Create a show</a></li>
+                <li><a href="#tracks">3. Add tracks</a></li>
+                <li><a href="#interface">4. Set up mixes &amp; routing</a></li>
+                <li><a href="#patch">5. USB patch</a></li>
+                <li><a href="#meters">6. Input meters</a></li>
+                <li><a href="#cues">7. Cues</a></li>
+                <li><a href="#perform">8. Performing</a></li>
+                <li><a href="#listen">Listen</a></li>
+                <li><a href="#showmode">Show Mode</a></li>
+                <li><a href="#trouble">Troubleshooting</a></li>
+            </ol>
+        </nav>
+
+        <article>
+            <h2 id="overview">How it fits together</h2>
+            <p>A <strong>show</strong> holds everything for one gig or set:</p>
+            <table>
+                <tr><th>Part</th><th>What it is</th></tr>
+                <tr><td>Tracks</td><td>Up to five audio files (click, guide vocal, stems) that play in sync.</td></tr>
+                <tr><td>Mixes</td><td>Named outputs such as <em>IEM</em> or <em>FOH</em>. Each mix has its own level for every track and goes to the interface outputs you pick.</td></tr>
+                <tr><td>USB patch</td><td>Which interface channel each of IEM Mixer's outputs 1–12 uses.</td></tr>
+                <tr><td>Input meters</td><td>Which interface inputs the L/R meters show.</td></tr>
+                <tr><td>Cues</td><td>Named, coloured markers on the timeline that you can jump to.</td></tr>
+            </table>
+            <p>The main screen has three setup buttons: <kbd>Tracks</kbd>, <kbd>Interface</kbd> and <kbd>Cues</kbd>. Each opens a setup screen, and <kbd>Done</kbd> closes it.</p>
+
+            <h2 id="connect">1. Connect your interface</h2>
+            <ol>
+                <li>Plug a class-compliant USB audio interface or digital console into your iPhone or iPad. Use a powered hub if the interface needs power.</li>
+                <li>Open IEM Mixer. The status line beside the show title should show a green dot and your interface's name, followed by <kbd>Engine running</kbd>.</li>
+            </ol>
+            <p>Without an interface, IEM Mixer plays through the device's own output, which is useful for building a show on the go.</p>
+
+            <h2 id="show">2. Create a show</h2>
+            <ol>
+                <li>Tap <kbd>New</kbd> and give the show a name.</li>
+                <li>Use <kbd>Save As</kbd> to copy a show, for example to start a new set from an existing one, and <kbd>Delete</kbd> to remove one.</li>
+                <li>Tap the folder button beside the show title to open <kbd>Saved shows</kbd> and switch to another show. The one in use is marked <kbd>Current</kbd>.</li>
+            </ol>
+            <p>Changes save as you go, and the last show you used reopens at launch.</p>
+
+            <h2 id="tracks">3. Add tracks</h2>
+            <ol>
+                <li>Tap <kbd>Tracks</kbd>, then <kbd>Add track</kbd>, and choose an audio file from Files.</li>
+                <li>Each track card shows the file name, format, sample rate and length. Use the card's buttons to <kbd>Change track</kbd>, <kbd>Rename</kbd> it, choose a <kbd>Colour</kbd> or <kbd>Delete</kbd> it.</li>
+                <li>Repeat for up to five tracks. The header counts them, for example <em>3 OF 5</em>.</li>
+            </ol>
+            <div class="note" data-accent="orange">
+                <span class="label">Sample rate mismatch</span>
+                If tracks have different sample rates, Track Setup shows a warning. They will still play, but test the show before you perform. Ideally, export every track at the same rate as your interface.
+            </div>
+            <p>A track's colour is used for its fader on the performance screen, so pick one that's easy to tell apart, such as red for click.</p>
+
+            <h2 id="interface">4. Set up mixes &amp; routing</h2>
+            <p>This is where IEM Mixer earns its name. Tap <kbd>Interface</kbd>.</p>
+            <ol>
+                <li>The header shows the connected device and how many outputs it has, e.g. <em>4 AVAILABLE OUTPUTS</em>.</li>
+                <li>Tap <kbd>Add mix</kbd>. A new mix starts with every track at 50 and no outputs.</li>
+                <li>Tap <kbd>Rename</kbd> and give it a clear name: <em>IEM</em>, <em>FOH</em>, <em>Drums</em>…</li>
+                <li>Use the channel selectors to choose which outputs the mix goes to. For a stereo in-ear feed, pick two, e.g. 1 and 2. For a mono feed to the desk, pick one.</li>
+                <li>Add as many mixes as your outputs allow.</li>
+            </ol>
+            <p>A mix only appears on the performance screen once it has at least one output.</p>
+            <div class="note" data-accent="red">
+                <span class="label">Shown in red</span>
+                If a mix uses an output that the connected interface doesn't have, for example output 5 on a 4-output interface, it's shown in red. This is normal when you build a show on one interface and play it on another. Change the outputs, or connect the right hardware.
+            </div>
+            <p><kbd>Restart engine</kbd> at the bottom restarts audio from scratch. You shouldn't need it, but it's there if audio ever stops responding.</p>
+
+            <h3>Example: four-output interface</h3>
+            <table>
+                <tr><th>Mix</th><th>Outputs</th><th>Typical levels</th></tr>
+                <tr><td>IEM</td><td>1 &amp; 2</td><td>Click and guide up, stems lower</td></tr>
+                <tr><td>FOH</td><td>3 &amp; 4</td><td>Click and guide down, stems up</td></tr>
+            </table>
+
+            <h2 id="patch">5. USB patch</h2>
+            <p>IEM Mixer has 12 outputs. By default they go to interface channels 1–12. On a large console you may want them somewhere else.</p>
+            <ol>
+                <li>In <kbd>Interface</kbd>, find the <kbd>USB patch</kbd> card.</li>
+                <li>For each <kbd>Out 1</kbd>…<kbd>Out 12</kbd>, choose the interface channel it should use, e.g. 37–48 on a 48-channel console.</li>
+            </ol>
+            <p>Two outputs can't share a channel. If you pick a channel that's already in use, the two outputs swap. The patch is saved with the show.</p>
+
+            <h2 id="meters">6. Input meters</h2>
+            <p>The L and R meters on the performance screen show two of your interface's inputs. By default these are inputs 1 and 2.</p>
+            <ol>
+                <li>In <kbd>Interface</kbd>, find the <kbd>Input meters</kbd> card.</li>
+                <li>Choose an input for L and one for R, or set R to <kbd>Off</kbd> for a single meter.</li>
+            </ol>
+            <p>Meter colours: green for normal level, then yellow, orange, and red near the top. A peak marker holds for a moment, then falls.</p>
+
+            <h2 id="cues">7. Cues</h2>
+            <ol>
+                <li>Tap <kbd>Cues</kbd>. The timeline and <kbd>Play</kbd> / <kbd>Pause</kbd> are at the bottom.</li>
+                <li>Play or scrub to a point in the song, then tap <kbd>Add cue</kbd>. It's placed at the playhead.</li>
+                <li>Use the cue card's buttons to <kbd>Rename</kbd> it (<em>Intro</em>, <em>Verse</em>, <em>Chorus</em>), <kbd>Edit time</kbd> (in <code>MM:SS:hh</code>, hundredths of a second), choose a <kbd>Colour</kbd>, or <kbd>Delete</kbd> it.</li>
+            </ol>
+            <p>Cues you haven't renamed are numbered by timeline position. If you add a cue before <em>CUE 2</em>, it becomes CUE 2 and the rest move up.</p>
+
+            <h2 id="perform">8. Performing</h2>
+            <ol>
+                <li>Choose a mix with the mix buttons, e.g. <kbd>IEM</kbd>. Each shows the outputs it goes to.</li>
+                <li>The five faders now set that mix's levels. Switch to <kbd>FOH</kbd> and the same faders set the FOH mix. Every mix keeps its own levels.</li>
+                <li>Press <kbd>Play</kbd>. It turns into <kbd>Pause</kbd> (orange) while playing.</li>
+                <li>Tap <kbd>Show cues</kbd> for a row of cue buttons, then tap one to jump to it. <kbd>Hide cues</kbd> gives the faders the space back.</li>
+            </ol>
+            <p>Landscape puts the faders, meters, timeline and transport on one screen and is recommended on stage.</p>
+
+            <h2 id="listen">Listen</h2>
+            <p><kbd>Listen</kbd> lets you hear one mix on its own while you prepare, without changing anything.</p>
+            <ol>
+                <li>Plug headphones or a monitor into outputs 1/2.</li>
+                <li>Tap <kbd>Listen</kbd> and choose a mix. The button turns yellow and shows the mix's name.</li>
+                <li>While listening, switching mix buttons switches what you hear.</li>
+                <li>Tap it again and choose <kbd>Off</kbd> to go back to normal routing.</li>
+            </ol>
+            <div class="note" data-accent="yellow">
+                <span class="label">Before the show</span>
+                Turn Listen off before you perform, or outputs 1/2 will carry the mix you're listening to.
+            </div>
+
+            <h2 id="showmode">Show Mode</h2>
+            <p><kbd>Show mode</kbd> runs two Shortcuts that you create, so you can get your device ready for stage in one tap.</p>
+            <ol>
+                <li>Open the Shortcuts app and create a shortcut named exactly <code>IEM Show Mode ON</code>. Add actions such as <em>Set Focus</em> (Do Not Disturb), <em>Set Brightness</em> or <em>Set Auto-Lock</em>.</li>
+                <li>Create a second shortcut named <code>IEM Show Mode OFF</code> that undoes them.</li>
+                <li>In IEM Mixer, tap <kbd>Show mode</kbd>. Shortcuts runs and returns you to the app. The indicator turns green: <span class="status" style="display: inline-flex"><span class="dot green"></span><span class="green">Show mode on</span></span></li>
+            </ol>
+
+            <h2 id="trouble">Troubleshooting</h2>
+            <table>
+                <tr><th>You see</th><th>What to do</th></tr>
+                <tr><td><span class="status" style="display: inline-flex"><span class="dot red"></span>Disconnected</span></td><td>Check the cable, hub and interface power. IEM Mixer waits for the interface and carries on when it's back, with tracks still in sync.</td></tr>
+                <tr><td>Engine stopped</td><td>Usually caused by a phone call or another app taking the audio. IEM Mixer tries to restart on its own. If it doesn't, use <kbd>Restart engine</kbd> in Interface setup.</td></tr>
+                <tr><td>A mix button is red</td><td>It uses outputs the connected interface doesn't have. See <a href="#interface">Set up mixes</a>.</td></tr>
+                <tr><td>“Click INTERFACE to create outputs”</td><td>No mix has an output yet. See <a href="#interface">Set up mixes</a>.</td></tr>
+                <tr><td>Nothing on the meters</td><td>Check which inputs are selected under <a href="#meters">Input meters</a>.</td></tr>
+                <tr><td>Show Mode does nothing</td><td>Check the shortcut names match exactly, including capitals and spaces.</td></tr>
+            </table>
+        </article>
+    </div>
+</main>
+
+<footer class="site-footer">
+    <div class="wrap">
+        <span>© 2026 Small Audio</span>
+        <span><a href="./">IEM Mixer</a> · <a href="../presenter/">Presenter</a></span>
+    </div>
+</footer>
+
+</body>
+</html>
