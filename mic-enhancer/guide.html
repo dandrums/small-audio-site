@@ -3,12 +3,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Presenter user guide</title>
-    <meta name="description" content="How to use Presenter: connecting, ringing out with the graphic EQ, channel EQ, the 3-band compressor and presets.">
+    <title>Mic Enhancer user guide</title>
+    <meta name="description" content="How to use Mic Enhancer: connecting, ringing out with the graphic EQ, channel EQ, the 3-band compressor and presets.">
     <meta name="theme-color" content="#000000">
     <link rel="stylesheet" href="../assets/style.css">
-    <link rel="icon" type="image/png" href="../assets/img/favicon-presenter.png">
-    <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon-presenter.png">
+    <link rel="icon" type="image/png" href="../assets/img/favicon-mic-enhancer.png">
+    <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon-mic-enhancer.png">
 </head>
 <body>
 
@@ -17,8 +17,8 @@
         <a class="brand" href="../">Small Audio</a>
         <nav class="nav" aria-label="Main">
             <a href="../">Home</a>
-            <a href="../iem-mixer/">IEM Mixer</a>
-            <a href="./">Presenter</a>
+            <a href="../track-mixer/">Track Mixer</a>
+            <a href="./">Mic Enhancer</a>
             <a href="guide.html" aria-current="page">Guide</a>
         </nav>
     </div>
@@ -26,7 +26,7 @@
 
 <main class="wrap">
     <div style="padding-top: 48px">
-        <span class="eyebrow label">Presenter</span>
+        <span class="eyebrow label">Mic Enhancer</span>
         <h1>User guide</h1>
         <p class="lede">From plugging in to a clear, feedback-free voice. The usual order is: connect, ring out, shape, compress, save.</p>
     </div>
@@ -41,6 +41,7 @@
                 <li><a href="#eq">4. Channel EQ</a></li>
                 <li><a href="#comp">5. Compressor</a></li>
                 <li><a href="#presets">6. Presets</a></li>
+                <li><a href="#showmode">7. Show Mode</a></li>
                 <li><a href="#trouble">Troubleshooting</a></li>
             </ol>
         </nav>
@@ -49,7 +50,7 @@
             <h2 id="connect">1. Connect &amp; start</h2>
             <ol>
                 <li>Plug the mic into your USB interface, and the interface into your iPhone or iPad. Send the interface's output to the PA or desk.</li>
-                <li>Open Presenter and hold the device in landscape.</li>
+                <li>Open Mic Enhancer and hold the device in landscape.</li>
                 <li>Tap <kbd>Start</kbd>. The status turns green, <span class="status" style="display: inline-flex"><span class="dot green"></span><span class="green">Running</span></span>, and shows the sample rate, buffer size and latency.</li>
                 <li>Speak into the mic and watch the input meter in the top bar. Set the interface's gain so speech stays in the green and only reaches yellow on loud words.</li>
             </ol>
@@ -72,7 +73,7 @@
             </ul>
 
             <h2 id="ringout">3. Ring out with the graphic EQ</h2>
-            <p>Presenter opens on <kbd>GEQ</kbd>, because ringing out is the first job in a new room. Do it with the mic where the speaker will stand.</p>
+            <p>Mic Enhancer opens on <kbd>GEQ</kbd>, because ringing out is the first job in a new room. Do it with the mic where the speaker will stand.</p>
             <ol>
                 <li>Make sure <kbd>GEQ</kbd> and <kbd>RTA</kbd> (the analyser) are on. The blue spectrum shows what's going to the outputs. Turn on <kbd>Peak hold</kbd> for an orange line of recent peaks, and tap <kbd>Clear</kbd> to reset it.</li>
                 <li>Bring the PA up slowly until it just starts to ring.</li>
@@ -123,13 +124,25 @@
                 <li>If you change a loaded preset, it's marked <em>Modified since saved</em>. Tap <kbd>Update</kbd> to save the changes into it.</li>
                 <li><kbd>Reset all settings to defaults</kbd> sets everything flat. Saved presets are kept.</li>
             </ul>
-            <p>You don't have to save a preset for your settings to be kept. Presenter remembers the current settings when it closes. Device settings such as sample rate aren't part of a preset, because they belong to the hardware.</p>
+            <p>You don't have to save a preset for your settings to be kept. Mic Enhancer remembers the current settings when it closes. Device settings such as sample rate aren't part of a preset, because they belong to the hardware.</p>
+
+            <h2 id="showmode">7. Show Mode</h2>
+            <p>A text or call arriving mid-talk can interrupt the sound. <kbd>Show mode</kbd> runs two Shortcuts you create, so you can silence your device in one tap before you start.</p>
+            <ol>
+                <li>Open the Shortcuts app and create a shortcut named exactly <code>Mic Enhancer Show Mode ON</code>. Add actions such as <em>Set Focus</em> (Do Not Disturb), <em>Set Brightness</em> or <em>Set Auto-Lock</em>.</li>
+                <li>Create a second shortcut named <code>Mic Enhancer Show Mode OFF</code> that undoes them.</li>
+                <li>In Mic Enhancer, tap <kbd>Show mode</kbd>. Shortcuts runs and returns you to the app. The button turns from red to green.</li>
+            </ol>
+            <div class="note" data-accent="green">
+                <span class="label">Tip</span>
+                Turn Show Mode on before you tap <kbd>Start</kbd> for the talk, and off again afterwards.
+            </div>
 
             <h2 id="trouble">Troubleshooting</h2>
             <table>
                 <tr><th>Problem</th><th>What to do</th></tr>
                 <tr><td>Status shows <span class="status" style="display: inline-flex"><span class="dot red"></span>Stopped</span></td><td>Tap <kbd>Start</kbd>. If a red error line appears, check that the interface is connected and powered, then try again.</td></tr>
-                <tr><td>No sound out</td><td>Check <kbd>ⓘ</kbd> to see which output device Presenter is using. Check the interface's output level and the PA input.</td></tr>
+                <tr><td>No sound out</td><td>Check <kbd>ⓘ</kbd> to see which output device Mic Enhancer is using. Check the interface's output level and the PA input.</td></tr>
                 <tr><td>Meter not moving</td><td>Check the interface's input gain and phantom power for condenser mics.</td></tr>
                 <tr><td>Voice sounds thin</td><td>Lower the HPF frequency, and check the GEQ for too many deep cuts.</td></tr>
                 <tr><td>Voice sounds squashed</td><td>Raise the compressor thresholds or lower the ratio.</td></tr>
@@ -142,7 +155,7 @@
 <footer class="site-footer">
     <div class="wrap">
         <span>© 2026 Small Audio</span>
-        <span><a href="./">Presenter</a> · <a href="../iem-mixer/">IEM Mixer</a></span>
+        <span><a href="./">Mic Enhancer</a> · <a href="../track-mixer/">Track Mixer</a></span>
     </div>
 </footer>
 
