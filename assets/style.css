@@ -612,3 +612,6 @@ th {
     height: 112px;
     margin-bottom: 18px;
 }
+
+/* Single-column text pages (privacy, support): the guide layout without contents. */
+.guide.single { grid-template-columns: minmax(0, 760px); }
