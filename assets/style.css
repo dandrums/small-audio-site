@@ -231,6 +231,12 @@ section + section { border-top: 1px solid var(--outline-faint); }
 .dot.red { background: var(--red); }
 .status .green { color: var(--green); }
 
+/* Readouts like "48 kHz · 144 frames" keep their case, as in the app. */
+.status .mono {
+    text-transform: none;
+    letter-spacing: 0;
+}
+
 /* ---------- Cards ---------- */
 
 .grid {
@@ -428,6 +434,18 @@ a.card:hover { border-color: rgba(255, 255, 255, 0.6); }
 
 .shot img { width: 100%; height: auto; }
 
+/* Phone screenshots in portrait: four across on desktop, two on phones. */
+.shots.portrait { grid-template-columns: repeat(4, 1fr); }
+
+/* Wide landscape screenshots: the first full width, then two across. */
+.shots.landscape { grid-template-columns: repeat(2, 1fr); }
+.shots.landscape .shot:first-child { grid-column: 1 / -1; }
+
+@media (max-width: 800px) {
+    .shots.portrait { grid-template-columns: repeat(2, 1fr); }
+    .shots.landscape { grid-template-columns: 1fr; }
+}
+
 /* Shown until a real screenshot is dropped in. */
 .shot .placeholder {
     aspect-ratio: 19.5 / 9;
@@ -575,4 +593,22 @@ th {
 
 @media (prefers-reduced-motion: no-preference) {
     .nav a, .button, a.card { transition: color 0.15s, border-color 0.15s; }
+}
+
+/* ---------- App icons ---------- */
+
+/* iOS-style rounded square, with a faint edge so it sits on black. */
+.app-icon {
+    display: block;
+    width: 72px;
+    height: 72px;
+    border-radius: 22.5%;
+    margin-bottom: 14px;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.12), 0 6px 18px rgba(0, 0, 0, 0.6);
+}
+
+.app-icon.large {
+    width: 112px;
+    height: 112px;
+    margin-bottom: 18px;
 }

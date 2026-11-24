@@ -36,9 +36,9 @@ All links are relative, so the site works at a sub-path or on a custom domain.
 
 ## To do before launch
 
-- **Screenshots:** save PNGs into `assets/img/` and replace each
-  `<div class="placeholder">` in the two feature pages with
-  `<img src="../assets/img/NAME.png" alt="…">`.
+- **Screenshots:** done (`assets/img/iem-*.jpg`, `presenter-*.jpg`). To
+  replace one, crop off the status bar, resize to 720 px wide for portrait
+  or 1400 px for landscape, save as JPEG and keep the same file name.
 - **App Store links:** replace the `href="#"` on each
   "Coming soon to the App Store" button.
 - **Name:** the header says "Small Audio". Change it in every page's
