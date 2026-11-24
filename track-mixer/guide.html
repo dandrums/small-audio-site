@@ -42,8 +42,9 @@
                 <li><a href="#interface">4. Set up mixes &amp; routing</a></li>
                 <li><a href="#patch">5. USB patch</a></li>
                 <li><a href="#meters">6. Input meters</a></li>
-                <li><a href="#cues">7. Cues</a></li>
-                <li><a href="#perform">8. Performing</a></li>
+                <li><a href="#liveinput">7. Live input</a></li>
+                <li><a href="#cues">8. Cues</a></li>
+                <li><a href="#perform">9. Performing</a></li>
                 <li><a href="#listen">Listen</a></li>
                 <li><a href="#showmode">Show Mode</a></li>
                 <li><a href="#trouble">Troubleshooting</a></li>
@@ -59,6 +60,7 @@
                 <tr><td>Mixes</td><td>Named outputs such as <em>IEM</em> or <em>FOH</em>. Each mix has its own level for every track and goes to the interface outputs you pick.</td></tr>
                 <tr><td>USB patch</td><td>Which interface channel each of Track Mixer's outputs 1–12 uses.</td></tr>
                 <tr><td>Input meters</td><td>Which interface inputs the L/R meters show.</td></tr>
+                <tr><td>Live input</td><td>Those same inputs fed into chosen mixes, e.g. a vocal mic in your in-ears.</td></tr>
                 <tr><td>Cues</td><td>Named, coloured markers on the timeline that you can jump to.</td></tr>
             </table>
             <p>The main screen has three setup buttons: <kbd>Tracks</kbd>, <kbd>Interface</kbd> and <kbd>Cues</kbd>. Each opens a setup screen, and <kbd>Done</kbd> closes it.</p>
@@ -129,7 +131,24 @@
             </ol>
             <p>Meter colours: green for normal level, then yellow, orange, and red near the top. A peak marker holds for a moment, then falls.</p>
 
-            <h2 id="cues">7. Cues</h2>
+            <h2 id="liveinput">7. Live input</h2>
+            <p>Live input sends the inputs you chose for the meters into any mix you like, alongside the tracks. For example, a singer can hear their own mic in their in-ears, or a talkback mic can go to the band.</p>
+            <ol>
+                <li>Choose the inputs under <a href="#meters">Input meters</a>. Set R to <kbd>Off</kbd> for a single mono mic, which then plays in both ears.</li>
+                <li>In <kbd>Interface</kbd>, tap <kbd>Live input off</kbd> on each mix that should hear it. It turns green: <kbd>Live input on</kbd>. Leave it off for mixes like FOH.</li>
+                <li>On the performance screen, choose that mix. The L/R meters now have a fader cap: drag it up to bring the input into the mix. Each mix has its own level.</li>
+            </ol>
+            <p>Live input starts silent. Turning it off for a mix resets its level, so turning it back on starts silent again. With <a href="#listen">Listen</a> on, you hear the listened mix's live input on outputs 1/2 along with its tracks.</p>
+            <div class="note" data-accent="orange">
+                <span class="label">Latency</span>
+                Live input passes through your iPhone or iPad, so it arrives slightly late. That's fine for talkback or a quiet stage. On loud stages, where performers hear their own voice acoustically too, the delay can be distracting. There, use your interface's own direct monitoring for live sources and let Track Mixer play the tracks.
+            </div>
+            <div class="note" data-accent="green">
+                <span class="label">Safe by design</span>
+                Live input only passes when your USB interface is both the input and the output. If the interface is unplugged, live input stops immediately. The device's built-in microphone is never used, so it can't feed back through the phone's speaker.
+            </div>
+
+            <h2 id="cues">8. Cues</h2>
             <ol>
                 <li>Tap <kbd>Cues</kbd>. The timeline and <kbd>Play</kbd> / <kbd>Pause</kbd> are at the bottom.</li>
                 <li>Play or scrub to a point in the song, then tap <kbd>Add cue</kbd>. It's placed at the playhead.</li>
@@ -137,10 +156,10 @@
             </ol>
             <p>Cues you haven't renamed are numbered by timeline position. If you add a cue before <em>CUE 2</em>, it becomes CUE 2 and the rest move up.</p>
 
-            <h2 id="perform">8. Performing</h2>
+            <h2 id="perform">9. Performing</h2>
             <ol>
                 <li>Choose a mix with the mix buttons, e.g. <kbd>IEM</kbd>. Each shows the outputs it goes to.</li>
-                <li>The five faders now set that mix's levels. Switch to <kbd>FOH</kbd> and the same faders set the FOH mix. Every mix keeps its own levels.</li>
+                <li>The five faders now set that mix's levels. Switch to <kbd>FOH</kbd> and the same faders set the FOH mix. Every mix keeps its own levels. If the mix has <a href="#liveinput">live input</a>, its fader sits on the L/R meters.</li>
                 <li>Press <kbd>Play</kbd>. It turns into <kbd>Pause</kbd> (orange) while playing.</li>
                 <li>Tap <kbd>Show cues</kbd> for a row of cue buttons, then tap one to jump to it. <kbd>Hide cues</kbd> gives the faders the space back.</li>
             </ol>
@@ -175,6 +194,9 @@
                 <tr><td>A mix button is red</td><td>It uses outputs the connected interface doesn't have. See <a href="#interface">Set up mixes</a>.</td></tr>
                 <tr><td>“Click INTERFACE to create outputs”</td><td>No mix has an output yet. See <a href="#interface">Set up mixes</a>.</td></tr>
                 <tr><td>Nothing on the meters</td><td>Check which inputs are selected under <a href="#meters">Input meters</a>.</td></tr>
+                <tr><td>No fader on the L/R meters</td><td>The selected mix doesn't have live input on. See <a href="#liveinput">Live input</a>.</td></tr>
+                <tr><td>Live input is silent</td><td>Raise its fader on the L/R meters for that mix, and check that your USB interface is the input and output.</td></tr>
+                <tr><td>Live input sounds late or doubled</td><td>That's latency through the device. Use your interface's direct monitoring for live sources. See <a href="#liveinput">Live input</a>.</td></tr>
                 <tr><td>Show Mode does nothing</td><td>Check the shortcut names match exactly, including capitals and spaces.</td></tr>
             </table>
         </article>
